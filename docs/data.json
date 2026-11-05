@@ -1,0 +1,117 @@
+{
+ "actualizado": "05/11/2026 10:35",
+ "indicadores": [
+  {
+   "nombre": "SOFR - IORB",
+   "valor": 4.0000000000000036,
+   "fecha": "2026-11-04",
+   "estado": "atencion",
+   "error": null
+  },
+  {
+   "nombre": "EFFR - IORB",
+   "valor": -2.0000000000000018,
+   "fecha": "2026-11-03",
+   "estado": "atencion",
+   "error": null
+  },
+  {
+   "nombre": "Reservas bancarias",
+   "valor": 2.89377,
+   "fecha": "2026-10-28",
+   "estado": "atencion",
+   "error": null
+  },
+  {
+   "nombre": "TGA (cuenta del Tesoro)",
+   "valor": 938.208,
+   "fecha": "2026-11-03",
+   "estado": "atencion",
+   "error": null
+  },
+  {
+   "nombre": "ON RRP (reverse repo)",
+   "valor": 0.225,
+   "fecha": "2026-11-04",
+   "estado": "atencion",
+   "error": null
+  },
+  {
+   "nombre": "Uso del Standing Repo Facility",
+   "valor": 0.0,
+   "fecha": "2026-11-04",
+   "estado": "normal",
+   "error": null
+  },
+  {
+   "nombre": "Spread 10Y - 2Y",
+   "valor": 32.0,
+   "fecha": "2026-11-04",
+   "estado": "atencion",
+   "error": null
+  },
+  {
+   "nombre": "Spread 10Y - 3M",
+   "valor": 69.0,
+   "fecha": "2026-11-04",
+   "estado": "atencion",
+   "error": null
+  },
+  {
+   "nombre": "Spread High Yield (OAS)",
+   "valor": 3.4,
+   "fecha": "2026-11-03",
+   "estado": "normal",
+   "error": null
+  },
+  {
+   "nombre": "Spread Investment Grade (OAS)",
+   "valor": 0.93,
+   "fecha": "2026-11-03",
+   "estado": "normal",
+   "error": null
+  },
+  {
+   "nombre": "Spread CCC y menores (OAS)",
+   "valor": 13.16,
+   "fecha": "2026-11-03",
+   "estado": "atencion",
+   "error": null
+  },
+  {
+   "nombre": "VIX",
+   "valor": 20.83,
+   "fecha": "2026-11-03",
+   "estado": "atencion",
+   "error": null
+  },
+  {
+   "nombre": "MOVE",
+   "valor": 93.87999725341797,
+   "fecha": "2026-11-04",
+   "estado": "normal",
+   "error": null
+  },
+  {
+   "nombre": "VIXEQ (vol. de acciones individuales)",
+   "valor": 41.21,
+   "fecha": "2026-11-04",
+   "estado": "atencion",
+   "error": null
+  },
+  {
+   "nombre": "Equal weight - cap-weight, 12 meses",
+   "valor": 7.0522211875371,
+   "fecha": "2026-11-04",
+   "estado": "normal",
+   "error": null
+  },
+  {
+   "nombre": "Equal weight - cap-weight, 3 años",
+   "valor": -17.336298625261737,
+   "fecha": "2026-11-04",
+   "estado": "estres",
+   "error": null
+  }
+ ]
+}
