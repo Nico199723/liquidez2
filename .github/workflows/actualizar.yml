@@ -1,9 +1,8 @@
 name: actualizar-tablero
 on:
   schedule:
-    - cron: "0 12 * * 1-5"       # 09:00 Argentina
-    - cron: "0 13-21 * * 1-5"    # cada hora, de 10:00 a 18:00 Argentina
-    - cron: "30 22 * * 1-5"      # 19:30 Argentina
+    - cron: "0 12 * * 1-5"
+    - cron: "30 22 * * 1-5"
   workflow_dispatch:
 permissions:
   contents: write
@@ -16,6 +15,9 @@ jobs:
         with:
           python-version: "3.12"
       - run: python update.py
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+      - run: python filtro.py
       - name: Guardar cambios
         run: |
           git config user.name "tablero-bot"
