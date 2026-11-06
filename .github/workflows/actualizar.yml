@@ -1,8 +1,9 @@
 name: actualizar-tablero
 on:
   schedule:
-    - cron: "0 12 * * 1-5"
-    - cron: "30 22 * * 1-5"
+    - cron: "0 12 * * 1-5"       # 09:00 Argentina
+    - cron: "0 13-21 * * 1-5"    # cada hora, de 10:00 a 18:00 Argentina
+    - cron: "30 22 * * 1-5"      # 19:30 Argentina
   workflow_dispatch:
 permissions:
   contents: write
