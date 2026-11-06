@@ -2,7 +2,7 @@
 """Tablero de estrés de mercado. Solo biblioteca estándar, sin API keys.
 Uso: python update.py   (genera docs/index.html y docs/data.json)
      DEMO=1 python update.py   (usa valores de ejemplo, sin red)"""
-import csv, io, json, os, urllib.parse, urllib.request
+import csv, io, json, os, time, urllib.parse, urllib.request
 from datetime import date, datetime, timedelta, timezone
 from html import escape
 
@@ -10,10 +10,27 @@ DEMO = os.environ.get("DEMO") == "1"
 UA = {"User-Agent": "Mozilla/5.0 (tablero-estres)"}
 
 
-def get(url, timeout=30):
-    with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=timeout) as r:
-        return r.read().decode("utf-8", "replace")
+import time
 
+def get(url, timeout=90):
+    ultimo_error = None
+
+    for intento in range(3):
+        try:
+            with urllib.request.urlopen(
+                urllib.request.Request(url, headers=UA),
+                timeout=timeout
+            ) as r:
+                return r.read().decode("utf-8", "replace")
+
+        except Exception as e:
+            ultimo_error = e
+
+            if intento < 2:
+                print(f"[reintento {intento + 1}/3] {url}")
+                time.sleep(5)
+
+    raise ultimo_error
 
 def fred(series, days=1200):
     start = (date.today() - timedelta(days=days)).isoformat()
