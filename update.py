@@ -32,6 +32,7 @@ def get(url, timeout=90):
 
     raise ultimo_error
 
+
 def fred(series, days=1200):
     start = (date.today() - timedelta(days=days)).isoformat()
     txt = get(f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={series}&cosd={start}")
